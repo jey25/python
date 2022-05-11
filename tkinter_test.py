@@ -11,7 +11,7 @@ win.configure(bg="beige")
 
 def time():
     dnow = datetime.now()
-    btn.config(text=dnow)
+    b[2].config(text=dnow)
 
 def ent_p():
     a = ent.get()
@@ -20,10 +20,12 @@ def ent_p():
 ent = Entry(win)
 ent.pack()
 
-btn = Button(win, width=30, height=1, text="로또 번호 확인", command=ent_p)
-btn.pack()
+b = [None]*3
+b[0]=Button(win, text="But1")
+b[1]=Button(win, text="로또 번호 확인", command=ent_p)
+b[2]=Button(win, text="시간", command=time)
 
-btn = Button(win, width=30, height=1, text="시간", command=time)
-btn.pack()
+for a in b:
+    a.pack(side=RIGHT)
 
 win.mainloop()
