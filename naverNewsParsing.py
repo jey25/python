@@ -12,3 +12,5 @@ for link in bsObject.find_all('a'):
 #뉴스 이미지 가져오기
 for link in bsObject.find_all('img'):
     print(link.text.strip(), link.get('src'))
+
+# github test
