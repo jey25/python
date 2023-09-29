@@ -45,10 +45,11 @@ for title in titles:
     texts.append(text)
 
 texts.reverse()
-result = '\n'.join(texts)
+results = '\n'.join(texts)
 
-print(result)
+print(results)
 
+# with open("result.txt", mode="w") as file:
+#     for result in results:
+#         file.write(f"{result}")
 
-
-# links = []
