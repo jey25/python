@@ -30,4 +30,25 @@
 # 꼭 봐야 할 영화 100선 프로젝트
 # https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/
 
+from bs4 import BeautifulSoup
+import requests
 
+response = requests.get("https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/")
+
+soup = BeautifulSoup(response.text, "html.parser")
+titles = soup.find_all(name="h3", class_="title")
+
+texts = []
+
+for title in titles:
+    text = title.get_text()
+    texts.append(text)
+
+texts.reverse()
+result = '\n'.join(texts)
+
+print(result)
+
+
+
+# links = []
