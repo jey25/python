@@ -17,4 +17,10 @@ for tag in tags:
     links.append(link)
 
 
-upvote = [score.get_text() for score in soup.find_all(name="span", class_="socre")]
+upvote = [int(score.get_text().split()[0]) for score in soup.find_all(name="span", class_="socre")]
+
+largest_number = max(upvote)
+largest_index = upvote.index(largest_number)
+
+print(texts[largest_index])
+print(links[largest_index])
