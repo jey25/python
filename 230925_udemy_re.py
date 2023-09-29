@@ -57,22 +57,22 @@
 
 # Billnoard hot 100 스크래핑
 
-from bs4 import BeautifulSoup
-import requests
+# from bs4 import BeautifulSoup
+# import requests
 
-date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD : ")
-url = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
-soup = BeautifulSoup(url.text, "html.parser")
+# date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD : ")
+# url = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
+# soup = BeautifulSoup(url.text, "html.parser")
 
-titles = []
+# titles = []
 
-lists = soup.select("li ul li h3")
+# lists = soup.select("li ul li h3")
 
-for list in lists:
-    title = list.get_text().strip()
-    titles.append(title)
+# for list in lists:
+#     title = list.get_text().strip()
+#     titles.append(title)
 
-print(titles)
+# print(titles)
 
 
 
