@@ -64,9 +64,17 @@ date = input("Which year do you want to travel to? Type the date in this format 
 url = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
 soup = BeautifulSoup(url.text, "html.parser")
 
-print(soup)
+titles = []
 
-# texts = []
+lists = soup.select("li ul li h3")
+
+for list in lists:
+    title = list.get_text().strip()
+    titles.append(title)
+
+print(titles)
+
+
 
 
 
