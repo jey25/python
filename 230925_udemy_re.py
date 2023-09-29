@@ -30,26 +30,44 @@
 # 꼭 봐야 할 영화 100선 프로젝트
 # https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/
 
-from bs4 import BeautifulSoup
-import requests
+# from bs4 import BeautifulSoup
+# import requests
 
-response = requests.get("https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/")
+# response = requests.get("https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/")
 
-soup = BeautifulSoup(response.text, "html.parser")
-titles = soup.find_all(name="h3", class_="title")
+# soup = BeautifulSoup(response.text, "html.parser")
+# titles = soup.find_all(name="h3", class_="title")
 
-texts = []
+# texts = []
 
-for title in titles:
-    text = title.get_text()
-    texts.append(text)
+# for title in titles:
+#     text = title.get_text()
+#     texts.append(text)
 
-texts.reverse()
-results = '\n'.join(texts)
+# texts.reverse()
+# results = '\n'.join(texts)
 
-print(results)
+# print(results)
 
 # with open("result.txt", mode="w") as file:
 #     for result in results:
 #         file.write(f"{result}")
+
+
+
+# Billnoard hot 100 스크래핑
+
+from bs4 import BeautifulSoup
+import requests
+
+date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD : ")
+url = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
+soup = BeautifulSoup(url.text, "html.parser")
+
+print(soup)
+
+# texts = []
+
+
+
 
