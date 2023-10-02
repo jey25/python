@@ -62,6 +62,7 @@
 
 # date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD : ")
 # url = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
+
 # soup = BeautifulSoup(url.text, "html.parser")
 
 # titles = []
