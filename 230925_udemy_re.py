@@ -54,7 +54,6 @@
 #         file.write(f"{result}")
 
 
-
 # Billnoard hot 100 스크래핑
 
 # from bs4 import BeautifulSoup
