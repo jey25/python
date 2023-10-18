@@ -41,9 +41,10 @@ import pyautogui
 # 매 함수 호출마다 딜레이 설정
 pyautogui.PAUSE = 1.5
 
-# 복사 붙여넣기 기능
-pyperclip.copy('문자열')
-pyautogui.hotkey('ctrl', 'v')
+#한글 입력
+# pip install pyperclip
+# pyperclip.copy("코딩유치원") 
+# pyautogui.hotkey("ctrl", "v")
 
 # confidence 정확도 입력을 통한 이미지를 찾아서 클릭
 img = pyautogui.locateCenterOnScreen('x.png', confidence=0.95)
