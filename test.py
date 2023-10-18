@@ -1,4 +1,3 @@
-from re import sub
 
 
 subway = [10, 20, 30]
@@ -8,3 +7,4 @@ subway.insert(1, 15)
 print(subway)
 
 print(subway.pop())
+
