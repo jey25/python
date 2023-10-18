@@ -4,6 +4,16 @@ screenWidth, screenHeight
 currentMouseX, currentMouseY = pyautogui.position() # Get the XY position of the mouse.
 currentMouseX, currentMouseY
 
+# pyautogui.keyDown('ctrl') # ctrl 키를 누른 상태를 유지합니다.
+# pyautogui.keyUp('ctrl') # ctrl 키를 뗍니다. 
+
+# 스크린샷 저장
+img = pyautogui.screenshot()
+img.save('screenshot.png')
+
+# 마우스 드래그 (현재 위치에서 목표 좌표값으로 입력 시간동안)
+# pyautogui.dragTo(x=100, y=100, duration=2)
+
 pyautogui.moveTo(100, 150) # Move the mouse to XY coordinates.
 
 pyautogui.click()          # Click the mouse.
