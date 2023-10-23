@@ -44,7 +44,7 @@ while distance > 0:
     pyautogui.drag(0, -distance, duration=0.5)  # move up
  
 
-그 외의 추가로 알면 좋은 기능
+# 그 외의 추가로 알면 좋은 기능
 
 import pyautogui
 
