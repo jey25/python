@@ -1,14 +1,16 @@
 
-warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
-t_list = []
 
-for warn in warn_investment_list:
-    t= warn.lower()
-    t_list.append(t)
+user_input = int(input("입력 : "))
 
-user_input= input("입력 : ").lower()
-
-if user_input in t_list:
-    print("투자 경고")
+if user_input >= 81:
+    print("A")
+elif user_input >= 61:
+    print("B")
+elif user_input >= 41:
+    print("C")
+elif user_input >= 21:
+    print("D")
 else:
-    print("정답")
+    print("E")
+
+
