@@ -1,16 +1,12 @@
 
 
-user_input = int(input("입력 : "))
+환율 = {"달러": 1167, 
+        "엔": 1.096, 
+        "유로": 1268, 
+        "위안": 171}
+user = input("입력: ")
+num, currency = user.split()
+print(float(num) * 환율[currency], "원")
 
-if user_input >= 81:
-    print("A")
-elif user_input >= 61:
-    print("B")
-elif user_input >= 41:
-    print("C")
-elif user_input >= 21:
-    print("D")
-else:
-    print("E")
 
 
