@@ -21,7 +21,7 @@
 # print(max(number))
 
 
-
+# # 휴대전화 번호를 입력받고 통신사 알아내기
 # user_input = input("입력 : ")
 # number_list = user_input.split('-')
 
@@ -33,6 +33,19 @@
 #     com = "lg"
 
 # print(f"{com}")
+
+
+# 단어에서 특정 자릿수를 구해 일치하는지 측정
+# post_number = input("입력 : ")
+# post_number = post_number[:3]
+
+# if post_number in ["010", "011", "012"]:
+#     print("강북구")
+# elif post_number in ["014", "015", "016"]:
+#     print("도봉구")
+# else:
+#     print("노원구")
+
 
 
 
