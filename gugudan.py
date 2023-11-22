@@ -1,12 +1,15 @@
 
+result = []
 
 def GuGu(n):
-    result = []
     i = 1
     while i < 10:
         result.append(n*i)
         i += 1    
     return result
 
-print(GuGu(9))
+GuGu(3)
+
+for number in result:
+    print(str(number))
 
