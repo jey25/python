@@ -100,13 +100,12 @@
 #     print(j + x[1:])
 
 
-리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+# 99 부터 0 까지 숫자를 거꾸로 출력할 때 빼기를 이용하지 않으면 0 은 출력할 수 없음
+# for x in range(99, 0, -1):
+#     print(x)
 
-for x in 리스트:
-    x_list = x.split('.')
-    print(x_list[0])
-
-
+# for i in range(100):
+#     print(99 - i)
 
 
 
