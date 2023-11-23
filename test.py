@@ -92,11 +92,15 @@
 #   print(변수)
 
 
-리스트 = ["A", "b", "c", "D"]
+# # 리스트의 첫번째 문자만 대문자로 변경 후 이어 붙여 출력
+# 리스트 = ['dog', 'cat', 'parrot']
 
-for x in 리스트:
-    if len(x) > 3:
-        print(x)
+# for x in 리스트:
+#     j = x[0].upper()
+#     print(j + x[1:])
+
+
+
 
 
 
