@@ -108,4 +108,14 @@
 #     print(99 - i)
 
 
+#  소수점 출력을 원할 때 나누기를 이용
+# for num in range(10) :
+#     print(num / 10)
+
+j = 0
+for x in range(1, 11):
+    j += x
+
+print(j)
+    
 
