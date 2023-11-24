@@ -13,7 +13,6 @@
 # 3개의 숫자를 입력받은 후 가장 큰 숫자 출력
 # number = []
 
-
 # for _ in range(3):
 #     user_input = int(input("숫자 : "))
 #     number.append(user_input)
