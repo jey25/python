@@ -112,10 +112,7 @@
 # for num in range(10) :
 #     print(num / 10)
 
-j = 0
-for x in range(1, 11):
-    j += x
 
-print(j)
+
     
 
