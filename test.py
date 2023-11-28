@@ -113,11 +113,19 @@
 #     print(num / 10)
 
 
-# price_list = [32100, 32150, 32000, 32500]
+price_list = [32100, 32150, 32000, 32500]
 
 # # list 의 개수가 변해도 계속 사용할 수 있는 함수
 # for i in range(len(price_list)):
 #     print(price_list[i])
     
+# enumerate 는 리스트의 데이터를 보여줌
+# for i, data in enumerate(price_list):
+#     print(i, data)
 
+# for i in range(len(price_list)):
+#     print((len(price_list)-1)- i, price_list[i])
+
+# for i in range(1, 4):
+#     print(90 + 10 * i, price_list[i])
 
