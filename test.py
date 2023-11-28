@@ -129,3 +129,15 @@ price_list = [32100, 32150, 32000, 32500]
 # for i in range(1, 4):
 #     print(90 + 10 * i, price_list[i])
 
+
+# my_list = ["가", "나", "다", "라"]
+
+# # 아래 3개는 모두 동일한 값을 출력
+# for i in [0, 1, 2]:
+#     print(my_list[i], my_list[i+1])
+    
+# for i in range(len(my_list) - 1 ) :
+#   print(my_list[i], my_list[i+1])
+
+# for i in range( 1, len(my_list) ) :
+#   print(my_list[i-1], my_list[i])
