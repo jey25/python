@@ -113,6 +113,11 @@
 #     print(num / 10)
 
 
+# price_list = [32100, 32150, 32000, 32500]
 
+# # list 의 개수가 변해도 계속 사용할 수 있는 함수
+# for i in range(len(price_list)):
+#     print(price_list[i])
     
+
 
