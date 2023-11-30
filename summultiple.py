@@ -5,4 +5,5 @@ result = 0
 for i in range(1, 10000):
     if i % 4 == 0 or i % 7 == 0:
         result += i
+        
 print(result)
