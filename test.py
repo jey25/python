@@ -154,3 +154,30 @@ price_list = [32100, 32150, 32000, 32500]
 #     print(my_list[i-1], my_list[i-2])
 
 
+# # abs 함수는 무조건 양수를 반환
+# my_list = [100, 200, 400, 800]
+
+# for i in range(len(my_list) - 1):
+#     print(abs(my_list[i+1] - my_list[i]))
+
+
+# 3일 이동 평균을 계산하고 이를 화면에 출력
+# my_list = [100, 200, 400, 800, 1000, 1300]
+
+# for i in range(1, len(my_list)-1):
+#     print(float((my_list[i-1] + my_list[i] + my_list[i+1])/3))
+
+
+
+# low_prices  = [100, 200, 400, 800, 1000]
+# high_prices = [150, 300, 430, 880, 1000]
+
+# volatility = []
+
+# for i in range(5):
+#     vol = high_prices[i] - low_prices[i]
+#     volatility.append(vol)
+
+# print(volatility)
+
+
