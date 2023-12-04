@@ -154,3 +154,24 @@ price_list = [32100, 32150, 32000, 32500]
 #     print(my_list[i-1], my_list[i-2])
 
 
+# # abs 함수는 무조건 양수를 반환
+# my_list = [100, 200, 400, 800]
+
+# for i in range(len(my_list) - 1):
+#     print(abs(my_list[i+1] - my_list[i]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
