@@ -161,9 +161,11 @@ price_list = [32100, 32150, 32000, 32500]
 #     print(abs(my_list[i+1] - my_list[i]))
 
 
+# 3일 이동 평균을 계산하고 이를 화면에 출력
+# my_list = [100, 200, 400, 800, 1000, 1300]
 
-
-
+# for i in range(1, len(my_list)-1):
+#     print(float((my_list[i-1] + my_list[i] + my_list[i+1])/3))
 
 
 
