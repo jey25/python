@@ -218,3 +218,29 @@
 #     print(f"{x} / {y} = {x / y}")
 
 # print_arithmetic_operation(3,4)
+
+
+# def print_max(x, y, z):
+#     if x > y:
+#         if x > z:
+#             print(x)
+#         else:
+#             print(z)
+#     elif y > z:
+#         print(y)
+#     else:
+#         print(z)
+
+# def print_max(a, b, c) :
+#     max_val = 0
+#     if a > max_val :
+#         max_val = a
+#     if b > max_val :
+#         max_val = b
+#     if c > max_val :
+#         max_val = c
+#     print(max_val)
+
+# print_max(265,0,19)
+
+
