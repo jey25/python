@@ -113,7 +113,7 @@
 #     print(num / 10)
 
 
-price_list = [32100, 32150, 32000, 32500]
+# price_list = [32100, 32150, 32000, 32500]
 
 # # list 의 개수가 변해도 계속 사용할 수 있는 함수
 # for i in range(len(price_list)):
@@ -180,4 +180,10 @@ price_list = [32100, 32150, 32000, 32500]
 
 # print(volatility)
 
-apart = [[101, 102], [201, 202], [301, 302]]
+
+apart = [[101, 102],[201, 202],[301, 302]]
+
+for row in apart[::-1]:
+    for col in row[::-1]:
+        print(col)
+
