@@ -181,9 +181,17 @@
 # print(volatility)
 
 
+# # 리스트 거꾸로 돌려 순서대로 출력
+# apart = [[101, 102],[201, 202],[301, 302]]
+
+# for row in apart[::-1]:
+#     for col in row[::-1]:
+#         print(col)
+
+
 apart = [[101, 102],[201, 202],[301, 302]]
 
-for row in apart[::-1]:
-    for col in row[::-1]:
-        print(col)
-
+for row in apart:
+    for col in row:
+        print(col, "호")
+    print("-" * 5)
