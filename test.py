@@ -189,9 +189,17 @@
 #         print(col)
 
 
-apart = [[101, 102],[201, 202],[301, 302]]
+# data = [
+#     [ 2000,  3050,  2050,  1980],
+#     [ 7500,  2050,  2050,  1980],
+#     [15450, 15050, 15550, 14900]
+# ]
 
-for row in apart:
-    for col in row:
-        print(col, "호")
-    print("-" * 5)
+# result = []
+
+# for row in data:
+#     for col in row:
+#         result.append(col * 1.00014)
+
+# print(result)
+
