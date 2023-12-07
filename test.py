@@ -113,7 +113,7 @@
 #     print(num / 10)
 
 
-price_list = [32100, 32150, 32000, 32500]
+# price_list = [32100, 32150, 32000, 32500]
 
 # # list 의 개수가 변해도 계속 사용할 수 있는 함수
 # for i in range(len(price_list)):
@@ -179,5 +179,68 @@ price_list = [32100, 32150, 32000, 32500]
 #     volatility.append(vol)
 
 # print(volatility)
+
+
+# # 리스트 거꾸로 돌려 순서대로 출력
+# apart = [[101, 102],[201, 202],[301, 302]]
+
+# for row in apart[::-1]:
+#     for col in row[::-1]:
+#         print(col)
+
+
+# 이중 리스트 배열 저장
+# data = [
+#     [ 2000,  3050,  2050,  1980],
+#     [ 7500,  2050,  2050,  1980],
+#     [15450, 15050, 15550, 14900]
+# ]
+
+# result = [
+# ]
+
+# for row in data:
+#     sub = []
+#     for col in row:
+#         sub.append(col * 1.00014)
+#     result.append(sub)
+# print(result)
+
+
+# --------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------
+# 함수 (201 번 문제 ~)
+
+# def print_arithmetic_operation(x, y):
+#     print(f"{x} + {y} = {x + y}")
+#     print(f"{x} - {y} = {x - y}")
+#     print(f"{x} * {y} = {x * y}")
+#     print(f"{x} / {y} = {x / y}")
+
+# print_arithmetic_operation(3,4)
+
+
+# def print_max(x, y, z):
+#     if x > y:
+#         if x > z:
+#             print(x)
+#         else:
+#             print(z)
+#     elif y > z:
+#         print(y)
+#     else:
+#         print(z)
+
+# def print_max(a, b, c) :
+#     max_val = 0
+#     if a > max_val :
+#         max_val = a
+#     if b > max_val :
+#         max_val = b
+#     if c > max_val :
+#         max_val = c
+#     print(max_val)
+
+# print_max(265,0,19)
 
 
