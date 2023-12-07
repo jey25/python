@@ -211,3 +211,10 @@
 # --------------------------------------------------------------------------------------
 # 함수 (201 번 문제 ~)
 
+# def print_arithmetic_operation(x, y):
+#     print(f"{x} + {y} = {x + y}")
+#     print(f"{x} - {y} = {x - y}")
+#     print(f"{x} * {y} = {x * y}")
+#     print(f"{x} / {y} = {x / y}")
+
+# print_arithmetic_operation(3,4)
