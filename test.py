@@ -299,11 +299,48 @@
 # print_keys({"이름":"김말똥", "나이":30, "성별":0})
 
 
-my_dict = {"10/26" : [100, 130, 100, 100],
-           "10/27" : [10, 12, 10, 11]}
+# # key 를 입력받아 value 출력
+# my_dict = {"10/26" : [100, 130, 100, 100],
+#            "10/27" : [10, 12, 10, 11]}
 
-def print_value_by_key(dict, days):
-    
+# def print_value_by_key(dict, days):
+#     print(dict[days])
+
+# print_value_by_key  (my_dict, "10/27")
 
 
-print_value_by_key  (my_dict, "10/26")
+# # # 입력 문자를 한 줄에 다섯글자씩 출력
+# def print_5xn(line):
+#     chunk_num = int(len(line) / 5)
+#     for x in range(chunk_num + 1) :
+#         print(line[x * 5: x * 5 + 5])
+
+# print_5xn("아이엠어보이유알어걸")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
