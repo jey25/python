@@ -284,3 +284,11 @@
 # print_reverse("python")
 
 
+# # 리스트를 받아 평균 출력
+# def print_score(list):
+#     print(sum(list)/len(list))
+
+# print_score ([1, 2, 3])
+
+
+
