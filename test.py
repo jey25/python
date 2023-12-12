@@ -291,4 +291,19 @@
 # print_score ([1, 2, 3])
 
 
+# # dict 에서 키값만 출력
+# def print_keys(dict):
+#     for i in dict.keys():
+#         print(i)
 
+# print_keys({"이름":"김말똥", "나이":30, "성별":0})
+
+
+my_dict = {"10/26" : [100, 130, 100, 100],
+           "10/27" : [10, 12, 10, 11]}
+
+def print_value_by_key(dict, days):
+    
+
+
+print_value_by_key  (my_dict, "10/26")
