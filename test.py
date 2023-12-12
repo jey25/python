@@ -317,10 +317,14 @@
 
 # print_5xn("아이엠어보이유알어걸")
 
+#여러 인수를 갖는 함수
+# def add(*args):
+#     i = 0
+#     for n in args:
+#         i += n
+#     return i
 
-
-
-
+# print(add(3, 5, 7,8, 12, 23, 4 , 65))
 
 
 
