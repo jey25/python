@@ -244,3 +244,37 @@
 # print_max(265,0,19)
 
 
+# 10000 미만의 자연수에서 4의 배수와 7의 배수의 총합 구하기
+
+# result = 0
+# for i in range(1, 10000):
+#     if i % 4 == 0 or i % 7 == 0:
+#         result += i
+
+# print(result)
+
+
+# #구구단
+# result = []
+
+# def GuGu(n):
+#     i = 1
+#     while i < 10:
+#         result.append(n*i)
+#         i += 1    
+#     return result
+
+# GuGu(6)
+
+# for number in result:
+#     print(number)
+
+
+# # 로또 번호 추출
+# import random
+
+# lotto = sorted(random.sample(range(1,46), 6))
+# print(lotto)
+
+
+
