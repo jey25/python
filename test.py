@@ -277,4 +277,10 @@
 # print(lotto)
 
 
+# 문자열 역순 출력
+# def print_reverse(str):
+#     print(str[::-1]) 
+    
+# print_reverse("python")
+
 
