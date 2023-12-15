@@ -8,6 +8,7 @@
 # def bye():
 #     return 'bye'
 
+
 # @app.route('/<name>/<int:number>')
 # def greet(name, number):
 #     return f"hello {name}, you are {number} years old"
