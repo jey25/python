@@ -346,19 +346,43 @@
 
 # # 현재 시간 출력
 import datetime
+import time
 # print(datetime.datetime.now())
 # print(type(datetime.datetime.now()))
 
+# 과거 날짜 출력
+# now = datetime.datetime.now()
+
+# for day in range(5, 0, -1):
+#     delta = datetime.timedelta(days=day)
+#     date = now - delta
+#     print(date)
+
+# 2023-12-19 14:40:22 형태로 출력 
+# now = datetime.datetime.now()
+# log_time = now.strftime("%Y-%m-%d %H:%M:%S")
+# print(log_time)
+
+# # 문자열을 시간 값으로 변경
+# day = "2020-05-04"
+# ret = datetime.datetime.strptime(day, "%Y-%m-%d")
+# print(ret, type(ret))
+
+# # 1초에 한번씩 현재 시간 출력
+# while True:
+#     now = datetime.datetime.now()
+#     now_time = now.strftime("%H:%M:%S")
+#     print(now_time)
+#     time.sleep(1)
 
 
+# # 현재 경로 출력
+import os
+# ret = os.getcwd()
+# print(ret, type(ret))
 
-
-
-
-
-
-
-
+# # 바탕화면 파일 이름 변경
+# os.rename(r"C:\Users\eyjang\Desktop\test.txt", r"C:\Users\eyjang\Desktop\test1.txt")
 
 
 
