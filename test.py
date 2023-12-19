@@ -327,6 +327,22 @@
 # print(add(3, 5, 7,8, 12, 23, 4 , 65))
 
 
+# def n_plus_1 (n) :
+#     result = n + 1
+#     return result
+
+# print(n_plus_1(3))
+
+
+# # replace 는 인텔리센스 자동완성 제공되지 않음
+# def convert_int(str):
+#     t = str.replace(',', '')
+#     print(type(t))
+#     s = int(t)
+#     print(type(s))
+#     return s
+
+# print(convert_int("1,234,567"))
 
 
 
