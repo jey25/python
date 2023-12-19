@@ -345,8 +345,10 @@
 # print(convert_int("1,234,567"))
 
 # # 현재 시간 출력
-# import datetime
+import datetime
 # print(datetime.datetime.now())
+# print(type(datetime.datetime.now()))
+
 
 
 
