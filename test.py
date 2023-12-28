@@ -390,7 +390,7 @@ import time
 #     print(i)
 
 
-# 클래스 인스턴스
+# python 클래스 인스턴스
 class Human:
     def __init__(self, name, age, sex):
         self.name = name
