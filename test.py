@@ -391,20 +391,42 @@ import time
 
 
 # python 클래스 인스턴스
-class Human:
-    def __init__(self, name, age, sex):
-        self.name = name
-        self.age = age
-        self.sex = sex
+# class Human:
+#     def __init__(self, name, age, sex):
+#         self.name = name
+#         self.age = age
+#         self.sex = sex
+        
+#     def __del__(self):
+#         print("나의 죽음을 알리지마라")
     
-    def who(self):
-        print(self.name, self.age, self.sex)
+#     def who(self):
+#         print(self.name, self.age, self.sex)
+    
+#     def setInfo(self, name, age, sex):
+#         self.name = name
+#         self.age = age
+#         self.sex = sex
 
-areum = Human("조아름", 25, "여자")
+# areum = Human("불명", "미상", "모름")
+# areum.who()      # Human.who(areum)
 
-areum.who()
-# Human.who(areum)
+# areum.setInfo("아름", 25, "여자")
+# areum.who()      # Human.who(areum)
 
+# del areum
+
+
+# 클래스 안의 메서드에는 self 가 항상 존재해야 함
+# class OMG:
+#     def print(self):
+#         print("Oh my god")
+
+# # 클래스의 인스턴스를 생성
+# myStock = OMG()
+
+# # 메서드 호출
+# myStock.print()
 
 
 
