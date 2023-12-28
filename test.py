@@ -390,7 +390,20 @@ import time
 #     print(i)
 
 
+# 클래스 인스턴스
+class Human:
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+    
+    def who(self):
+        print(self.name, self.age, self.sex)
 
+areum = Human("조아름", 25, "여자")
+
+areum.who()
+# Human.who(areum)
 
 
 
