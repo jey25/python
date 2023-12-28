@@ -434,6 +434,25 @@ import time
 #     def __init__(self, key, code):
 #         self.key = key
 #         self.code = code
+        
+#     def set_name(self, name):
+#         self.key = name
+        
+#     def set_code(self, code):
+#         self.code = code
+    
+#     def get_name(self):
+#         return self.key
+
+#     def get_code(self):
+#         return self.code
 
 # 삼성 = stock("삼성전자", "005930")
-# print(삼성.key, 삼성.code)
+# print(삼성.key)
+# print(삼성.code)
+# print(삼성.get_name())
+# print(삼성.get_code())
+
+
+
+
