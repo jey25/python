@@ -429,7 +429,11 @@ import time
 # myStock.print()
 
 
+# Stock 클래스의 객체가 생성될 때 종목명과 종목코드를 입력 받을 수 있도록 생성자를 정의
+# class stock:
+#     def __init__(self, key, code):
+#         self.key = key
+#         self.code = code
 
-
-
-
+# 삼성 = stock("삼성전자", "005930")
+# print(삼성.key, 삼성.code)
