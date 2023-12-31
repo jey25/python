@@ -384,6 +384,7 @@ import time
 # # 바탕화면 파일 이름 변경
 # os.rename(r"C:\Users\eyjang\Desktop\test.txt", r"C:\Users\eyjang\Desktop\test1.txt")
 
+
 # import numpy
 # # numpy 로 0.1 씩 증가하는 값 출력
 # for i in numpy.arange(0, 5, 0.1):
@@ -446,6 +447,7 @@ import time
 
 #     def get_code(self):
 #         return self.code
+
 
 # 삼성 = stock("삼성전자", "005930")
 # print(삼성.key)
