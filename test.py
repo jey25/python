@@ -597,15 +597,19 @@ from typing import Any
 #             self.balance = (self.balance * 1.01)
 
 
-# class Car:
-#     def __init__(self, tier, money):
-#         self.tier = tier
-#         self.money = money
-        
-# car = Car(2, 1000)
+# 클래스 상속
+# class 차:
+#     def __init__(self, 바퀴, 가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
 
-# print(car.tier)
-# print(car.money)
+# class 자전차(차):
+#     def __init__(self, 바퀴, 가격, 구동계):
+#         super().__init__(바퀴, 가격)
+#         self.구동계 = 구동계
 
-
+# bicycle = 자전차(2, 100, "시마노")
+# print(bicycle.구동계)
+# print(bicycle.바퀴)
+# print(bicycle.가격)
 
