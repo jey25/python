@@ -35,3 +35,16 @@
 # f.close()
 
 
+# # 바탕화면의 파일을 읽어와 데이터를 리스트에 저장
+# f = open("C:/Users/eyjang/Desktop/매수종목1.txt", encoding="utf-8")
+# lines = f.readlines()   # python list
+
+# codes = []
+# for line in lines:
+#     code = line.strip()  #'\n'
+#     codes.append(code)
+
+# print(codes)
+# f.close()
+
+
