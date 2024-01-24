@@ -671,3 +671,13 @@ from typing import Any
 #         print("clean data")
 #     finally:
 #         print("변환 완료")
+
+
+# # 별찍기 코드
+# def star():
+#     print("*" * 30)
+#     print("")
+#     print("*" * 30)
+
+# star()
+
