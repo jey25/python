@@ -347,6 +347,7 @@
 # # 현재 시간 출력
 import datetime
 import time
+from typing import Any
 # print(datetime.datetime.now())
 # print(type(datetime.datetime.now()))
 
@@ -594,5 +595,17 @@ import time
 #         if self.deposit_count % 5 == 0:         # 5, 10, 15
 #             # 이자 지금
 #             self.balance = (self.balance * 1.01)
+
+
+# class Car:
+#     def __init__(self, tier, money):
+#         self.tier = tier
+#         self.money = money
+        
+# car = Car(2, 1000)
+
+# print(car.tier)
+# print(car.money)
+
 
 
