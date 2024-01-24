@@ -582,3 +582,17 @@ import time
 
 # p = Account("파이썬", 1000000000)
 # p.display_info()
+
+
+# 입금 횟수가 5회가 될 때 잔고를 기준으로 1%의 이자가 잔고에 추가되도록 코드를 변경해보세요.
+
+# def deposit(self, amount):
+#     if amount >= 1:
+#         self.balance += amount
+
+#         self.deposit_count += 1
+#         if self.deposit_count % 5 == 0:         # 5, 10, 15
+#             # 이자 지금
+#             self.balance = (self.balance * 1.01)
+
+
