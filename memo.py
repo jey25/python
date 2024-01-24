@@ -48,3 +48,17 @@
 # f.close()
 
 
+# # 바탕화면의 파일을 읽어와 데이터를 딕셔너리에 저장
+# f = open("C:/Users/eyjang/Desktop/매수종목1.txt", encoding="utf-8")
+# lines = f.readlines()
+
+# data = {}
+# for line in lines:
+#     line = line.strip()     # '\n' 제거
+#     k, v = line.split()
+#     #print(k, v)
+#     data[k] = v
+
+# print(data)
+# f.close()
+
