@@ -571,3 +571,14 @@ import time
 # print(jang.balance)
 
 
+
+# def display_info(self):
+#     print("은행이름: ", self.bank)
+#     print("예금주: ", self.name)
+#     print("계좌번호: ", self.account_number)
+    
+#     # 포맷팅  :, 을 이용해서 천 단위 자리마다 쉼표를 찍는다
+#     print("잔고: ", f"{self.balance:,}")
+
+# p = Account("파이썬", 1000000000)
+# p.display_info()
