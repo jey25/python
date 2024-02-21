@@ -681,3 +681,4 @@ from typing import Any
 
 # star()
 
+print("Hello")
