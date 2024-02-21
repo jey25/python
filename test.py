@@ -681,6 +681,7 @@ from typing import Any
 
 # star()
 
-시가총액 = 298000000000000
-현재가 = 50000
-PER = 15.79
+# num_str = "720"
+# num_int = int(num_str)
+# print(num_int+1, type(num_int))
+
