@@ -703,5 +703,8 @@ from typing import Any
 # print(string[1::2]) #짝짝짝
 
 
+# string = "PYTHON"
+# print(string[::-1]) #마지막 글자부터 순차적으로 출력  
+
 
 
