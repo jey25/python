@@ -688,3 +688,11 @@ from typing import Any
 # letters = 'python'
 # print(letters[0], letters[2])
 
+
+# license_plate = "24가 2210"
+
+# # 아래 두 print 결과는 같다
+# print(license_plate[4:])
+# print(license_plate[-4:])
+
+
