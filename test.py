@@ -729,5 +729,17 @@ from typing import Any
 # print(l)
 
 
-t1 = 'python'
-t2 = 'java'
+# t1 = 'python'
+# t2 = 'java'
+
+# print((t1 + " " + t2 + " ") * 4) 
+
+
+# 상장주식수 = "5,969,782,550"
+# print(int(상장주식수.replace(',', '')), type(int(상장주식수.replace(',', ''))))
+
+
+# 분기 = "2020/03(E) (IFRS연결)"
+# print(분기[:7])
+
+
