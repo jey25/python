@@ -743,3 +743,9 @@ from typing import Any
 # print(분기[:7])
 
 
+# data = "   삼성전자    "
+# data1 = data.strip()
+# print(data)
+# print(data.strip())
+# print(data1)
+
