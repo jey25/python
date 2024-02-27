@@ -696,3 +696,12 @@ from typing import Any
 # print(license_plate[-4:])
 
 
+# string = "홀짝홀짝홀짝"
+
+# # # 시작인덱스:끝인덱스:오프셋
+# print(string[::2])  #홀홀홀
+# print(string[1::2]) #짝짝짝
+
+
+
+
