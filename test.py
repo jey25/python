@@ -707,4 +707,27 @@ from typing import Any
 # print(string[::-1]) #마지막 글자부터 순차적으로 출력  
 
 
+# phone_number = "010-1111-2222"
+# print(phone_number.replace("-", " "))
+# print(phone_number.replace("-", ""))
 
+
+# url = "http://sharebook.kr"
+
+# print(url[-2::])
+
+# url_split = url.split('.')
+# print(url_split[-1])
+
+
+# string = 'abcdfe2a354a32a'
+# print(string.replace('a', 'A'))
+
+
+# string = 'abcd'
+# l = string.replace('b', 'B')
+# print(l)
+
+
+t1 = 'python'
+t2 = 'java'
