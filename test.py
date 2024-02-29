@@ -757,3 +757,16 @@ from typing import Any
 
 # file_name = "보고서.xlsx"
 # print(file_name.endswith("xlsx"))
+
+# file_name = "보고서.xlsx"
+# print(file_name.endswith(("xlsx", "xls")))
+
+
+# file_name = "2020_보고서.xlsx"
+# print(file_name.startswith('2020'))
+
+
+# # Split() 이 문자를 공백 기준으로 나누고 배열로 저장
+# a = "hello world"
+# print(a.split())
+
