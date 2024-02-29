@@ -820,5 +820,22 @@ from typing import Any
 
 # interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
 # print(" ".join(interest))
+# print("\n".join(interest))
+
+
+# string = "삼성전자/LG전자/Naver"
+# print(string.split('/'))
+
+
+# # 데이터 오름차순 정렬 (sort())
+# data = [2, 4, 3, 1, 5, 10, 9]
+# data.sort()
+# print(data)
+
+
+# data = [2, 4, 3, 1, 5, 10, 9]
+# data2 = sorted(data)
+# print(data2)
+
 
 
