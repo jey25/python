@@ -770,3 +770,11 @@ from typing import Any
 # a = "hello world"
 # print(a.split())
 
+
+# data = "039490     "
+# data = data.rstrip()
+# print(data)
+
+
+
+
