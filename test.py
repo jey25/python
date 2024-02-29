@@ -749,3 +749,8 @@ from typing import Any
 # print(data.strip())
 # print(data1)
 
+
+# ticker = "btc_krw"
+# print(ticker.upper())
+# print(ticker)
+
