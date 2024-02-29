@@ -850,3 +850,10 @@ from typing import Any
 # interest = ['삼성전자', 'LG전자', 'SK Hynix']
 # print(tuple(interest))
 
+# temp = ('apple', 'banana', 'cake')
+# a, b, c = temp
+# print(a, b, c)
+
+# data = tuple(range(2, 100, 2))
+# print(data)
+
