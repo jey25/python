@@ -19,7 +19,6 @@
 
 # print(max(number))
 
-
 # # 휴대전화 번호를 입력받고 통신사 알아내기
 # user_input = input("입력 : ")
 # number_list = user_input.split('-')
