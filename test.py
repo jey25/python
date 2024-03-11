@@ -863,13 +863,6 @@ from typing import Any
 # print(valid_score)
 
 
-inventory = {
-    "메로나": [300, 20],
-    "비비빅": [400, 3],
-    "죠스바": [250, 100],
-}
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
 
-inventory["월드콘"] = [500, 7]
-
-print(inventory)
 
