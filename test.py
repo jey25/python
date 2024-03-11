@@ -863,9 +863,12 @@ from typing import Any
 # print(valid_score)
 
 
-temp = {
-    "메로나":1000,
-    "폴라포":1200,
-    "빵빠레":1800,
+inventory = {
+    "메로나": [300, 20],
+    "비비빅": [400, 3],
+    "죠스바": [250, 100],
 }
-print(temp)
+
+
+print(inventory)
+
