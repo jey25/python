@@ -863,6 +863,16 @@ from typing import Any
 # print(valid_score)
 
 
-icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+
+# ice = list(icecream.keys())
+# print(ice)
+# print(sum(icecream.values()))
+
+# # 딕셔너리가 있을 때 update 로 집어넣기
+# new_product = {'팥빙수':2700, '아맛나':1000}
+# icecream.update(new_product)
+
+# print(icecream)
 
 
