@@ -853,8 +853,8 @@ from typing import Any
 # a, b, c = temp
 # print(a, b, c)
 
-
-
 # data = tuple(range(2, 100, 2))
 # print(data)
+
+
 
