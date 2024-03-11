@@ -869,6 +869,7 @@ inventory = {
     "죠스바": [250, 100],
 }
 
+inventory["월드콘"] = [500, 7]
 
 print(inventory)
 
