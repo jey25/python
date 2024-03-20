@@ -889,3 +889,12 @@ from typing import Any
 # user = input("입력 : ")
 # print(user*2)
 
+
+# input_user = input("숫자 : ")
+
+# if int(input_user) % 2 == 0:
+#     print(input_user, "짝수")
+# else:
+#     print(input_user, "홀수")
+
+
