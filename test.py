@@ -886,3 +886,6 @@ from typing import Any
 # close_table = dict(zip(date, close_price))
 # print(close_table)
 
+# user = input("입력 : ")
+# print(user*2)
+
