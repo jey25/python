@@ -892,10 +892,13 @@ from typing import Any
 
 # input_user = int(input("숫자 : "))
 
-# if input_user + 20 > 255:
+# if input_user - 20 < 0:
+#     print(0)
+# elif input_user - 20 > 255:
 #     print(255)
 # else:
-#     print(input_user + 20)
+#     print(input_user-20)
+
 
 
 
