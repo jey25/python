@@ -900,6 +900,13 @@ from typing import Any
 #     print(input_user-20)
 
 
+# input_user = input("시간 : ")
+# print(input_user[-2:])
+
+# if input_user[-2:] == "00":
+#     print("정각")
+# else:
+#     print("정각 아님")
 
 
 
