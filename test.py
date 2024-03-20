@@ -890,11 +890,16 @@ from typing import Any
 # print(user*2)
 
 
-# input_user = input("숫자 : ")
+# input_user = int(input("숫자 : "))
 
-# if int(input_user) % 2 == 0:
-#     print(input_user, "짝수")
+# if input_user + 20 > 255:
+#     print(255)
 # else:
-#     print(input_user, "홀수")
+#     print(input_user + 20)
+
+
+
+
+
 
 
