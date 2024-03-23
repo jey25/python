@@ -1,10 +1,10 @@
 import sys
-import psutil
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QComboBox
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-import usb.core
+import psutil
+import win32com.client
 
 class PerformanceMonitor(QMainWindow):
     def __init__(self):
@@ -19,12 +19,12 @@ class PerformanceMonitor(QMainWindow):
         layout = QVBoxLayout()
 
         self.device_combo = QComboBox()
-        self.device_combo.setFixedSize(200, 20)  # 가로 길이 100, 세로 길이 20
+        self.device_combo.setFixedSize(200, 20)
         self.populate_device_list()
         layout.addWidget(self.device_combo)
 
         self.app_combo = QComboBox()
-        self.app_combo.setFixedSize(200, 20)  # 가로 길이 100, 세로 길이 20
+        self.app_combo.setFixedSize(200, 20)
         self.app_combo.addItems(["App 1", "App 2", "App 3"])
         layout.addWidget(self.app_combo)
 
@@ -40,8 +40,6 @@ class PerformanceMonitor(QMainWindow):
 
         self.canvas = FigureCanvas(plt.Figure())
         layout.addWidget(self.canvas)
-
-        self.central_widget.setLayout(layout)
 
         self.cpu_label = QLabel()
         layout.addWidget(self.cpu_label)
@@ -61,15 +59,15 @@ class PerformanceMonitor(QMainWindow):
         self.fps_label = QLabel()
         layout.addWidget(self.fps_label)
 
+        self.central_widget.setLayout(layout)
+
         self.anim = None
 
     def populate_device_list(self):
-        devices = usb.core.find(find_all=True)
+        wmi = win32com.client.GetObject("winmgmts:")
+        devices = wmi.ExecQuery("SELECT * FROM Win32_PnPEntity WHERE Name LIKE '%(COM%'")
         for device in devices:
-            manufacturer = usb.util.get_string(device, device.iManufacturer)
-            product = usb.util.get_string(device, device.iProduct)
-            device_name = f"{manufacturer} {product}"
-            self.device_combo.addItem(device_name)
+            self.device_combo.addItem(device.Name)
 
     def start_test(self):
         self.anim = animation.FuncAnimation(self.canvas.figure, self.update_graph, interval=1000)
@@ -95,6 +93,7 @@ class PerformanceMonitor(QMainWindow):
         self.network_label.setText(f"Network Status: {network_status}")
         self.rex_label.setText(f"Rex Detection: {rex_detection}")
         self.fps_label.setText(f"FPS: {fps}")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
