@@ -12,69 +12,65 @@ class PerformanceMonitor(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        layout.addWidget(self.canvas)
-
-        self.ax = None  # 그래프를 그릴 변수 초기화
-
         self.setWindowTitle("Performance Monitor")
         self.setGeometry(100, 100, 800, 600)
 
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        layout = QVBoxLayout()
+        self.layout = QVBoxLayout()  # layout을 멤버 변수로 선언
 
         self.device_combo = QComboBox()
         self.device_combo.setFixedSize(200, 20)
         self.get_serial_ports()  
-        layout.addWidget(self.device_combo)
+        self.layout.addWidget(self.device_combo)
 
         self.app_combo = QComboBox()
         self.app_combo.setFixedSize(200, 20)
         self.populate_installed_apps()  
-        layout.addWidget(self.app_combo)
+        self.layout.addWidget(self.app_combo)
 
         self.start_button = QPushButton("Start Test")
         self.start_button.setFixedSize(100, 50)
         self.start_button.clicked.connect(self.start_test)
-        layout.addWidget(self.start_button)
+        self.layout.addWidget(self.start_button)
 
         self.stop_button = QPushButton("Stop Test")
         self.stop_button.clicked.connect(self.stop_test)
         self.stop_button.setFixedSize(100, 50)
-        layout.addWidget(self.stop_button)
+        self.layout.addWidget(self.stop_button)
 
         self.canvas = FigureCanvas(plt.Figure())
         self.canvas.setStyleSheet("height: 400px;")  
-        layout.addWidget(self.canvas)
+        self.layout.addWidget(self.canvas)
 
         self.cpu_label = QLabel()
-        layout.addWidget(self.cpu_label)
+        self.layout.addWidget(self.cpu_label)
 
         self.memory_label = QLabel()
-        layout.addWidget(self.memory_label)
+        self.layout.addWidget(self.memory_label)
 
         self.power_label = QLabel()
-        layout.addWidget(self.power_label)
+        self.layout.addWidget(self.power_label)
 
         self.network_label = QLabel()
-        layout.addWidget(self.network_label)
+        self.layout.addWidget(self.network_label)
 
         self.temperature_label = QLabel()
-        layout.addWidget(self.temperature_label)
+        self.layout.addWidget(self.temperature_label)
 
         self.rex_label = QLabel()
-        layout.addWidget(self.rex_label)
+        self.layout.addWidget(self.rex_label)
 
         self.fps_label = QLabel()
-        layout.addWidget(self.fps_label)
+        self.layout.addWidget(self.fps_label)
 
-        self.central_widget.setLayout(layout)
+        self.central_widget.setLayout(self.layout)
         
         self.anim = None
         self.timer = QTimer()  
         self.timer.timeout.connect(self.update_data_and_labels)  
-        self.timer.start(1000)  
+        self.timer.start(1000) 
 
     def populate_installed_apps(self):  
         apps = self.get_installed_apps()
