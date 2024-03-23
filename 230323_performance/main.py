@@ -4,8 +4,11 @@ from PyQt5.QtCore import QTimer
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from PyQt5.QtWidgets import QMessageBox
 import psutil
 import random
+import subprocess
+import serial.tools.list_ports
 
 class PerformanceMonitor(QMainWindow):
     def __init__(self):
@@ -26,7 +29,7 @@ class PerformanceMonitor(QMainWindow):
 
         self.app_combo = QComboBox()
         self.app_combo.setFixedSize(200, 20)
-        self.app_combo.addItems(["App 1", "App 2", "App 3"])
+        self.populate_installed_apps()  # 수정된 부분
         layout.addWidget(self.app_combo)
 
         self.start_button = QPushButton("Start Test")
@@ -71,11 +74,24 @@ class PerformanceMonitor(QMainWindow):
         self.timer.timeout.connect(self.update_data)  # 타이머 시그널을 update_data 메서드에 연결
         self.timer.start(1000)  # 1초마다 타이머가 발생
 
+    def populate_installed_apps(self):  # 수정된 부분
+        apps = self.get_installed_apps()
+        if apps:
+            self.app_combo.addItems(apps)
+
+    def get_installed_apps(self):
+        try:
+            command = "adb shell pm list packages -3"  
+            result = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
+            packages = result.decode().splitlines()
+            app_list = [package.split(":")[-1] for package in packages]
+            return app_list
+        except subprocess.CalledProcessError as e:
+            print("Error:", e)
+            return []
+
     def get_serial_ports(self):
-        serial_ports = []
-        for disk in psutil.disk_partitions():
-            if 'COM' in disk.device:
-                serial_ports.append(disk.device)
+        serial_ports = [port.device for port in serial.tools.list_ports.comports()]
         return serial_ports
 
     # def populate_device_list(self):
@@ -85,23 +101,29 @@ class PerformanceMonitor(QMainWindow):
     #         self.device_combo.addItem(device.Name)
 
     def start_test(self):
+        if not self.device_combo.currentText() or not self.app_combo.currentText():
+            self.show_warning_dialog("Please select a device and an app.")
+            return
         self.anim = animation.FuncAnimation(self.canvas.figure, self.update_graph, interval=1000)
-        # Start monitoring performance metrics here
+
+    def show_warning_dialog(self, message):
+        warning_dialog = QMessageBox()
+        warning_dialog.setIcon(QMessageBox.Warning)
+        warning_dialog.setWindowTitle("Warning")
+        warning_dialog.setText(message)
+        warning_dialog.exec_()
 
     def stop_test(self):
         if self.anim:
             self.anim.event_source.stop()
-        # Stop monitoring performance metrics here
 
     def update_data(self):
-        # Update data from the connected device here
-        # Example: Read CPU usage, memory usage, network status, etc. from the selected device
-        cpu_percent = 50  # Dummy value, replace with actual data from the device
-        memory_percent = 60  # Dummy value, replace with actual data from the device
-        power_usage = 0  # Dummy value, replace with actual data from the device
-        network_status = "Good"  # Dummy value, replace with actual data from the device
-        rex_detection = "None"  # Dummy value, replace with actual data from the device
-        fps = 30  # Dummy value, replace with actual data from the device
+        cpu_percent = 50  
+        memory_percent = 60  
+        power_usage = 0  
+        network_status = "Good"  
+        rex_detection = "None"  
+        fps = 30  
         return cpu_percent, memory_percent, power_usage, network_status, rex_detection, fps
 
     def update_graph(self, i):
