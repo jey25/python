@@ -1,11 +1,10 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QComboBox
+import subprocess
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QComboBox, QMessageBox
 from PyQt5.QtCore import QTimer
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from PyQt5.QtWidgets import QMessageBox
-import subprocess
 import serial.tools.list_ports
 
 class PerformanceMonitor(QMainWindow):
@@ -68,9 +67,8 @@ class PerformanceMonitor(QMainWindow):
         self.central_widget.setLayout(layout)
         
         self.anim = None
-        self.timer = QTimer()  
+        self.timer = QTimer()
         self.timer.timeout.connect(self.update_data_and_labels)  
-        self.timer.start(1000)  
 
     def populate_device_list(self):
         serial_ports = self.get_serial_ports()
@@ -105,8 +103,11 @@ class PerformanceMonitor(QMainWindow):
             return
         try:
             self.anim = animation.FuncAnimation(self.canvas.figure, self.update_graph, interval=1000)
+            self.timer.start(1000)  
         except subprocess.CalledProcessError as e:
             self.show_warning_dialog("Device is not connected.")
+        except Exception as e:
+            print("An error occurred:", e)
 
     def show_warning_dialog(self, message):
         warning_dialog = QMessageBox()
@@ -118,17 +119,21 @@ class PerformanceMonitor(QMainWindow):
     def stop_test(self):
         if self.anim:
             self.anim.event_source.stop()
+            self.timer.stop()
 
     def update_data_and_labels(self):
-        cpu_percent, memory_percent, power_usage, network_status, rex_detection, fps, temperature = self.update_data()
+        try:
+            cpu_percent, memory_percent, power_usage, network_status, rex_detection, fps, temperature = self.update_data()
 
-        self.cpu_label.setText(f"CPU Usage: {cpu_percent}%")
-        self.memory_label.setText(f"Memory Usage: {memory_percent}%")
-        self.power_label.setText(f"Power Usage: {power_usage}")
-        self.network_label.setText(f"Network Status: {network_status}")
-        self.temperature_label.setText(f"Temperature: {temperature}")
-        self.rex_label.setText(f"Rex Detection: {rex_detection}")
-        self.fps_label.setText(f"FPS: {fps}")
+            self.cpu_label.setText(f"CPU Usage: {cpu_percent}%")
+            self.memory_label.setText(f"Memory Usage: {memory_percent}%")
+            self.power_label.setText(f"Power Usage: {power_usage}")
+            self.network_label.setText(f"Network Status: {network_status}")
+            self.temperature_label.setText(f"Temperature: {temperature}")
+            self.rex_label.setText(f"Rex Detection: {rex_detection}")
+            self.fps_label.setText(f"FPS: {fps}")
+        except Exception as e:
+            print("An error occurred:", e)
 
     def update_data(self):
         device = self.device_combo.currentText()
@@ -136,48 +141,62 @@ class PerformanceMonitor(QMainWindow):
         memory_command = f"adb -s {device} shell \"dumpsys meminfo | grep 'Used RAM'\""
         temperature_command = f"adb -s {device} shell \"dumpsys battery | grep temperature\""
 
-        cpu_result = subprocess.check_output(cpu_command, shell=True, stderr=subprocess.STDOUT)
-        cpu_percent = cpu_result.decode().strip()
+        try:
+            cpu_result = subprocess.check_output(cpu_command, shell=True, stderr=subprocess.STDOUT)
+            cpu_percent = cpu_result.decode().strip()
 
-        memory_result = subprocess.check_output(memory_command, shell=True, stderr=subprocess.STDOUT)
-        return device, cpu_command, memory_command, temperature_command, cpu_result, cpu_percent, memory_result
+            memory_result = subprocess.check_output(memory_command, shell=True, stderr=subprocess.STDOUT)
+            memory_percent = memory_result.decode().split()[2]
+
+            # Dummy data for demonstration
+            power_usage = "20%"
+            network_status = "Connected"
+            rex_detection = "Not detected"
+            fps = "60"
+            temperature = "40°C"
+
+            return cpu_percent, memory_percent, power_usage, network_status, rex_detection, fps, temperature
+
+        except subprocess.CalledProcessError as e:
+            print("Error:", e)
+            return "", "", "", "", "", "", ""
+        except Exception as e:
+            print("An error occurred:", e)
+            return "", "", "", "", "", "", ""
 
     def update_graph(self, i):
-        device, cpu_command, memory_command, temperature_command, cpu_result, cpu_percent, memory_result = self.update_data()
+        try:
+            device, cpu_command, memory_command, temperature_command, cpu_result, cpu_percent, memory_result = self.update_data()
 
-        # 그래프를 처음 그릴 때에만 초기화
-        if self.ax is None:
-            self.ax = self.canvas.figure.subplots()
-            self.ax.set_xlabel('Time (s)')
-            self.ax.set_ylabel('Percentage (%)')
-            self.ax.set_title('CPU and Memory Usage')
-            self.cpu_data = []
-            self.memory_data = []
-            self.time_data = []
-            self.line_cpu, = self.ax.plot([], [], label='CPU Usage')
-            self.line_memory, = self.ax.plot([], [], label='Memory Usage')
-            self.ax.legend()
+            if not hasattr(self, 'ax'):
+                self.ax = self.canvas.figure.subplots()
+                self.ax.set_xlabel('Time (s)')
+                self.ax.set_ylabel('Percentage (%)')
+                self.ax.set_title('CPU and Memory Usage')
+                self.cpu_data = []
+                self.memory_data = []
+                self.time_data = []
+                self.line_cpu, = self.ax.plot([], [], label='CPU Usage')
+                self.line_memory, = self.ax.plot([], [], label='Memory Usage')
+                self.ax.legend()
 
-        # CPU 사용량과 메모리 사용량을 가져와 데이터 리스트에 추가
-        self.cpu_data.append(float(cpu_percent))
-        self.memory_data.append(float(memory_result.decode().split()[2]))
+            self.cpu_data.append(float(cpu_percent))
+            self.memory_data.append(float(memory_result))
 
-        # 시간 데이터는 간단하게 데이터 개수로 대체
-        self.time_data.append(len(self.cpu_data))
+            self.time_data.append(len(self.cpu_data))
 
-        # 그래프를 업데이트
-        self.line_cpu.set_data(self.time_data, self.cpu_data)
-        self.line_memory.set_data(self.time_data, self.memory_data)
+            self.line_cpu.set_data(self.time_data, self.cpu_data)
+            self.line_memory.set_data(self.time_data, self.memory_data)
 
-        # x축 범위를 적절히 조절하여 스크롤링 효과를 얻을 수 있도록 함
-        self.ax.set_xlim(0, max(10, len(self.cpu_data)))
+            self.ax.set_xlim(0, max(10, len(self.cpu_data)))
 
-        # 그래프를 재그림
-        self.canvas.draw()
+            self.canvas.draw()
+
+        except Exception as e:
+            print("An error occurred:", e)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     monitor = PerformanceMonitor()
     monitor.show()
-    serial_ports = monitor.get_serial_ports()  
     sys.exit(app.exec_())
