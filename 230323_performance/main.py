@@ -18,59 +18,66 @@ class PerformanceMonitor(QMainWindow):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        self.layout = QVBoxLayout()  # layout을 멤버 변수로 선언
+        layout = QVBoxLayout()
 
         self.device_combo = QComboBox()
         self.device_combo.setFixedSize(200, 20)
-        self.get_serial_ports()  
-        self.layout.addWidget(self.device_combo)
+        self.populate_device_list()  
+        layout.addWidget(self.device_combo)
 
         self.app_combo = QComboBox()
         self.app_combo.setFixedSize(200, 20)
         self.populate_installed_apps()  
-        self.layout.addWidget(self.app_combo)
+        layout.addWidget(self.app_combo)
 
         self.start_button = QPushButton("Start Test")
         self.start_button.setFixedSize(100, 50)
         self.start_button.clicked.connect(self.start_test)
-        self.layout.addWidget(self.start_button)
+        layout.addWidget(self.start_button)
 
         self.stop_button = QPushButton("Stop Test")
         self.stop_button.clicked.connect(self.stop_test)
         self.stop_button.setFixedSize(100, 50)
-        self.layout.addWidget(self.stop_button)
+        layout.addWidget(self.stop_button)
 
         self.canvas = FigureCanvas(plt.Figure())
         self.canvas.setStyleSheet("height: 400px;")  
-        self.layout.addWidget(self.canvas)
+        layout.addWidget(self.canvas)
 
         self.cpu_label = QLabel()
-        self.layout.addWidget(self.cpu_label)
+        layout.addWidget(self.cpu_label)
 
         self.memory_label = QLabel()
-        self.layout.addWidget(self.memory_label)
+        layout.addWidget(self.memory_label)
 
         self.power_label = QLabel()
-        self.layout.addWidget(self.power_label)
+        layout.addWidget(self.power_label)
 
         self.network_label = QLabel()
-        self.layout.addWidget(self.network_label)
+        layout.addWidget(self.network_label)
 
         self.temperature_label = QLabel()
-        self.layout.addWidget(self.temperature_label)
+        layout.addWidget(self.temperature_label)
 
         self.rex_label = QLabel()
-        self.layout.addWidget(self.rex_label)
+        layout.addWidget(self.rex_label)
 
         self.fps_label = QLabel()
-        self.layout.addWidget(self.fps_label)
+        layout.addWidget(self.fps_label)
 
-        self.central_widget.setLayout(self.layout)
+        self.central_widget.setLayout(layout)
         
         self.anim = None
         self.timer = QTimer()  
         self.timer.timeout.connect(self.update_data_and_labels)  
-        self.timer.start(1000) 
+        self.timer.start(1000)  
+
+    def populate_device_list(self):
+        serial_ports = self.get_serial_ports()
+        if serial_ports:
+            self.device_combo.addItems(serial_ports)
+        else:
+            self.show_warning_dialog("No device found.")
 
     def populate_installed_apps(self):  
         apps = self.get_installed_apps()
@@ -92,6 +99,14 @@ class PerformanceMonitor(QMainWindow):
         serial_ports = [port.device for port in serial.tools.list_ports.comports()]
         return serial_ports
 
+    def start_test(self):
+        if not self.device_combo.currentText() or not self.app_combo.currentText():
+            self.show_warning_dialog("Please select a device and an app.")
+            return
+        try:
+            self.anim = animation.FuncAnimation(self.canvas.figure, self.update_graph, interval=1000)
+        except subprocess.CalledProcessError as e:
+            self.show_warning_dialog("Device is not connected.")
 
     def show_warning_dialog(self, message):
         warning_dialog = QMessageBox()
@@ -126,12 +141,6 @@ class PerformanceMonitor(QMainWindow):
 
         memory_result = subprocess.check_output(memory_command, shell=True, stderr=subprocess.STDOUT)
         return device, cpu_command, memory_command, temperature_command, cpu_result, cpu_percent, memory_result
-
-    def start_test(self):
-        if not self.device_combo.currentText() or not self.app_combo.currentText():
-            self.show_warning_dialog("Please select a device and an app.")
-            return
-        self.anim = animation.FuncAnimation(self.canvas.figure, self.update_graph, interval=1000)
 
     def update_graph(self, i):
         device, cpu_command, memory_command, temperature_command, cpu_result, cpu_percent, memory_result = self.update_data()
