@@ -193,6 +193,7 @@ class USBInfoApp(QWidget):
             print("Error:", e)
             return 'N/A'
 
+
     def get_cpu_time(self, selected_device):
         result_cpu = subprocess.run(['adb', '-s', selected_device, 'shell', 'cat', '/proc/stat'], capture_output=True, text=True)
         cpu_output = result_cpu.stdout.strip().split('\n')
