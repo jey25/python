@@ -980,3 +980,17 @@ from typing import Any
 # else:
 #     print(count3)
     
+
+# number = input("")
+# count = number.split("-")
+
+# if count[0] == "011":
+#     com = "SKT"
+# elif count[0] == "016":
+#     com = "KT"
+# elif count[0] == "019":
+#     com = "LGU"
+# else:
+#     com = "알수없음"
+
+# print(f"{com} 사용자")
