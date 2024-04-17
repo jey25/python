@@ -919,5 +919,81 @@ from typing import Any
 #     print("오답")
 
 
+# fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
+# user = input("입력 : ")
 
-# 119
+# if user in fruit:
+#     print("정답")
+# else:
+#     print("오답")
+
+# v = fruit.values()
+# if user in v:
+#     print("정답")
+# else:
+#     print("오답")
+
+
+# 함수의 소문자 여부 판별 후, 소문자 -> 대문자, 대문자 -> 소문자
+# string = input("")
+
+# if string.islower():
+#     print(string.upper())
+# else:
+#     print(string.lower())
+
+
+# score = int(input("점수 : "))
+
+# if 100 >= score >= 81:
+#     print("grade is A")
+# elif 80 >= score >= 61:
+#     print("grade is B")
+# elif 60 >= score >= 41:
+#     print("grade is C")
+# elif 40 >= score >= 21:
+#     print("grade is D")
+# elif score > 100:
+#     print("over")
+# else:
+#     print("grade is E")
+
+# 환율 계산기
+# 환율 = {"달러": 1167, 
+#         "엔": 1.096, 
+#         "유로": 1268, 
+#         "위안": 171}
+# user = input("입력: ")
+# num, currency = user.split()
+# print(float(num) * 환율[currency], "원")
+
+
+# count1 = int(input(""))
+# count2 = int(input(""))
+# count3 = int(input(""))
+
+# if count1 > count2 and count1 > count3:
+#     print(count1)
+# elif count2 > count1 and count2 > count3:
+#     print(count2)
+# else:
+#     print(count3)
+    
+
+# number = input("")
+# count = number.split("-")
+
+# if count[0] == "011":
+#     com = "SKT"
+# elif count[0] == "016":
+#     com = "KT"
+# elif count[0] == "019":
+#     com = "LGU"
+# else:
+#     com = "알수없음"
+
+# print(f"{com} 사용자")
+
+
+number = input("우편번호 : ")
+number
