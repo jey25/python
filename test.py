@@ -934,3 +934,29 @@ from typing import Any
 # else:
 #     print("오답")
 
+
+# 함수의 소문자 여부 판별 후, 소문자 -> 대문자, 대문자 -> 소문자
+# string = input("")
+
+# if string.islower():
+#     print(string.upper())
+# else:
+#     print(string.lower())
+
+
+# score = int(input("점수 : "))
+
+# if 100 >= score >= 81:
+#     print("grade is A")
+# elif 80 >= score >= 61:
+#     print("grade is B")
+# elif 60 >= score >= 41:
+#     print("grade is C")
+# elif 40 >= score >= 21:
+#     print("grade is D")
+# elif score > 100:
+#     print("over")
+# else:
+#     print("grade is E")
+
+
