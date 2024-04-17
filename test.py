@@ -997,3 +997,4 @@ from typing import Any
 
 
 number = input("우편번호 : ")
+number
