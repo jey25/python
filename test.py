@@ -959,4 +959,24 @@ from typing import Any
 # else:
 #     print("grade is E")
 
+# 환율 계산기
+# 환율 = {"달러": 1167, 
+#         "엔": 1.096, 
+#         "유로": 1268, 
+#         "위안": 171}
+# user = input("입력: ")
+# num, currency = user.split()
+# print(float(num) * 환율[currency], "원")
 
+
+# count1 = int(input(""))
+# count2 = int(input(""))
+# count3 = int(input(""))
+
+# if count1 > count2 and count1 > count3:
+#     print(count1)
+# elif count2 > count1 and count2 > count3:
+#     print(count2)
+# else:
+#     print(count3)
+    
