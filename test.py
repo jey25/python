@@ -996,3 +996,4 @@ from typing import Any
 # print(f"{com} 사용자")
 
 
+number = input("우편번호 : ")
