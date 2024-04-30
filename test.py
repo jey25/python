@@ -454,8 +454,6 @@ from typing import Any
 # print(삼성.get_name())
 # print(삼성.get_code())
 
-
-
 # class Stock:
 #     def __init__(self, name, code):
 #         self.name = name
@@ -467,8 +465,6 @@ from typing import Any
 # # 클래스를 변수에 넣을 때 꼭 None 값 입력해줘야 함 
 # a = Stock(None, None)
 # a.set_name("jey")
-
-
 
 # print(a.name)
 
