@@ -448,11 +448,13 @@ from typing import Any
 #     def get_code(self):
 #         return self.code
 
+
 # 삼성 = stock("삼성전자", "005930")
 # print(삼성.key)
 # print(삼성.code)
 # print(삼성.get_name())
 # print(삼성.get_code())
+
 
 # class Stock:
 #     def __init__(self, name, code):
