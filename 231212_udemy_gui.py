@@ -20,8 +20,6 @@ dev_build.grid(row=1, column=5, padx=10, pady=10)
 find_issue = tkinter.Label (text="find_issue")
 find_issue.grid(row=2, column=5, padx=10, pady=10)
 
-
-
-
-
 window.mainloop()
+
+
