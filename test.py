@@ -470,7 +470,6 @@ from typing import Any
 # print(a.name)
 
 
-
 # class Stock:
 #     def __init__(self, name, code, per, pbr, dividend):
 #         self.name = name
