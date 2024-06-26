@@ -1041,3 +1041,60 @@ from typing import Any
 # print(license_plate[4:])
 # print(license_plate[-4:])
 
+# string = "홀짝홀짝홀짝"
+# print(string[0::2])
+
+# string = "PYTHON"
+# print(string[::-1])
+
+# phone_number = "010-1111-2222"
+# p = phone_number.replace("-", " ")
+# t = p.replace(" ", "")
+# print(t)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
