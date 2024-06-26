@@ -1147,6 +1147,11 @@ from typing import Any
 # print(list(interest))
 # print(tuple(interest))
 
+# temp = ('apple', 'banana', 'cake')
+# a, b, c = temp
+# print(type(a), type(b), type(c))
+
+# print(tuple(range(2, 100, 2)))
 
 
 
