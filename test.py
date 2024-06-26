@@ -1134,6 +1134,38 @@ from typing import Any
 # movie_rank = (1,)
 # print(type(movie_rank))
 
+# # 괄호 없이 튜플 생성
+# t = 1, 2, 3, 4
+# print(t, type(t))
+
+# t = ('a', 'b', 'c')
+# print(t)
+# t = ('A', 'B', 'C')
+# print(t)
+
+# interest = ('삼성전자', 'LG전자', 'SK Hynix')
+# print(list(interest))
+# print(tuple(interest))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
