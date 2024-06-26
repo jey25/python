@@ -1059,7 +1059,15 @@ from typing import Any
 # t2 = 'java'
 # print((t1 + ' ' + t2 + ' ') *4)
 
+# 상장주식수 = "5,969,782,550"
+# print(int(상장주식수.replace(",", "")), type(상장주식수))
 
+# 분기 = "2020/03(E) (IFRS연결)"
+# print(분기[:7])
+
+# data = "   삼성전자    "
+# s = data.strip()
+# print(s)
 
 
 
