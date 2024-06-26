@@ -1076,19 +1076,23 @@ from typing import Any
 # file_name = "보고서.xlsx"
 # print(file_name.endswith("xlsx"))
 
+# filename = "example.xl"
+# print(filename.endswith(("xlsx", "xls", "xl")))
 
+# file_name = "2020_보고서.xlsx"
+# s = file_name.startswith("2020_")
+# print(s)
 
+# ticker = "btc_krw"
+# a = ticker.split("_")
+# print(a)
 
+# date = "2020-05-01"
+# a = date.split("-")
+# print(a)
 
-
-
-
-
-
-
-
-
-
+# data = "039490     "
+# print(data.rstrip())
 
 
 
