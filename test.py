@@ -1069,8 +1069,12 @@ from typing import Any
 # s = data.strip()
 # print(s)
 
+# ticker = "hello"
+# t = ticker.capitalize()
+# print(t)
 
-
+# file_name = "보고서.xlsx"
+# print(file_name.endswith("xlsx"))
 
 
 
