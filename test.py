@@ -1013,7 +1013,6 @@ from typing import Any
 # print("first", end=" " );print("second")
 # print(5/3)
 
-
 # 삼성전자 = 50000
 # 시가총액 = 298000000000000
 # PER = 15.79
@@ -1036,7 +1035,6 @@ from typing import Any
 # s = "15.79"
 # print(type(float(s)))
 
-
 # license_plate = "24가 2210"
 # print(license_plate[4:])
 # print(license_plate[-4:])
@@ -1052,7 +1050,14 @@ from typing import Any
 # t = p.replace(" ", "")
 # print(t)
 
+# url = "http://sharebook.kr"
+# s = url.split('.')
+# print(s[1])
+# print(s[-1])
 
+# t1 = 'python'
+# t2 = 'java'
+# print((t1 + ' ' + t2 + ' ') *4)
 
 
 
