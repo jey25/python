@@ -994,5 +994,50 @@ from typing import Any
 # print(f"{com} 사용자")
 
 
-number = input("우편번호 : ")
-number
+# number = input("우편번호 : ")
+# number
+
+
+# 2024-06-26
+
+# print("Hello world")
+# print("Mary's consmetics")
+# print('"도둑이야".')
+# print('C:\Windows')
+# print("안녕하세요.\n만나서\t반갑습니다.")
+# print ("오늘은", "일요일")
+# print('naver;kakao;sk;samsung')
+# print('naver', 'kakao', 'sk', 'samsung', sep=";")
+# print('naver/kakao/sk/samsung')
+# print('naver', 'kakao', 'sk', 'samsung', sep="/")
+# print("first", end=" " );print("second")
+# print(5/3)
+
+
+# 삼성전자 = 50000
+# 시가총액 = 298000000000000
+# PER = 15.79
+# print(삼성전자, type(삼성전자), 시가총액, type(시가총액), PER, type(PER))
+
+# s = "hello"
+# t = "python"
+# print(s+"!", t)
+
+# a = "132"
+# print(type(a))
+
+# num_str = "720"  #형변환
+# num_int = int(num_str)
+# print(num_int+1, type(num_int))
+
+# num = 100
+# print(type(str(num)))
+
+# s = "15.79"
+# print(type(float(s)))
+
+
+# license_plate = "24가 2210"
+# print(license_plate[4:])
+# print(license_plate[-4:])
+
