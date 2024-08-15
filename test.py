@@ -455,6 +455,8 @@ from typing import Any
 # print(삼성.get_code())
 
 
+
+
 # class Stock:
 #     def __init__(self, name, code):
 #         self.name = name
