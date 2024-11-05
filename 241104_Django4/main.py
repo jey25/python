@@ -1,9 +1,7 @@
-def calculator(a, b, operator):
-    if operator == "+":
-        return a+b
-    else:
-        return a-b
+def divider(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        print("Please do not divide by zero!")
 
-# 사용 예시
-print(calculator(5, 3, "+"))  # 출력: 8
-print(calculator(5, 2, "-"))  # 출력: 2
+print(divider(2, 0))
