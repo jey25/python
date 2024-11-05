@@ -1,9 +1,4 @@
-a = 22
-b = 20
+employees = {'ceo':'cindy', 'cfo':'james'}
 
-if a + b == 42:
-    print("42")
-elif 30 < a + b < 41:
-    print(a+b)
-else:
-    print("False")
+for position in employees:
+    print(f"{position}, {employees[position]}")
