@@ -1,7 +1,9 @@
-my_list = [1,23,4, 10,4,5,5,64,4,55,6]
+def calculator(a, b, operator):
+    if operator == "+":
+        return a+b
+    else:
+        return a-b
 
-for num in my_list:
-    if num == 10:
-        print(my_list.index(num))
-        
-
+# 사용 예시
+print(calculator(5, 3, "+"))  # 출력: 8
+print(calculator(5, 2, "-"))  # 출력: 2
