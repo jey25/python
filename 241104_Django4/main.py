@@ -1,4 +1,5 @@
-employees = {'ceo':'cindy', 'cfo':'james'}
+n = 1
 
-for position in employees:
-    print(f"{position}, {employees[position]}")
+while n<5:
+    print(f"{n}")
+    n = n + 1
