@@ -1,5 +1,7 @@
-n = 1
+my_list = [1,23,4, 10,4,5,5,64,4,55,6]
 
-while n<5:
-    print(f"{n}")
-    n = n + 1
+for num in my_list:
+    if num == 10:
+        print(my_list.index(num))
+        
+
