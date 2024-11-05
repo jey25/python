@@ -1,7 +1,9 @@
-mylist = [1,2,3]
-mytuple = (1,2,3)
+a = 22
+b = 20
 
-mylist[0] = "new"
-print(mylist)
-print(mytuple)
-
+if a + b == 42:
+    print("42")
+elif 30 < a + b < 41:
+    print(a+b)
+else:
+    print("False")
