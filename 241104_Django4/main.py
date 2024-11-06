@@ -18,4 +18,15 @@
 # print(mycircle.perimeter())
 
 
+class Dog():
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+    
+    def calculate_human_age(self):
+        return self.age*7
 
+hans = Dog("Hans", "Sheperd", 7)
+human_age = hans.calculate_human_age()
+print(human_age)
