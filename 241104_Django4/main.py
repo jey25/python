@@ -1,11 +1,21 @@
 
-class Student():
-    def __init__(self, name, gpa) -> None:
-        self.name = name
-        self.gpa = gpa
+# # 2024-11-06 Class 생성
+# class Circle():
+    
+#     pi = 3.14
+    
+#     def __init__(self, radius=1) -> None:
+#         self.radius = radius
         
+#     def area(self):
+#         return self.radius*self.radius*self.pi
+    
+#     def perimeter(self):
+#         return self.radius*2*Circle.pi
 
-stu1 = Student(name="jang", gpa=5)
-stu2 = Student(name="Su", gpa=7)
+# mycircle = Circle(radius=4)
+# print(mycircle.area())
+# print(mycircle.perimeter())
 
-print(stu2.gpa)
+
+
