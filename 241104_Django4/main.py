@@ -92,4 +92,22 @@
 #     def sound(self):
 #         print("ruff")
 
+# # 특수 메서드
+# class Book():
+    
+#     def __init__(self, title, author, pages) -> None:
+#         self.title = title
+#         self.author = author
+#         self.pages = pages
+    
+#     def __str__(self) -> str:
+#         return f"{self.title}{self.author}"
+    
+#     def __len__(self):
+#         return self.pages
+    
+# book = Book("test", "jang", 120)
+# print(book)
+# print(len(book))
+
 
