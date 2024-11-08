@@ -16,11 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http.response import HttpResponse
-from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_view),
-    path('first_app/', include('first_app.urls'))
+    path('my_app/', include('my_app.urls')),
 ]
