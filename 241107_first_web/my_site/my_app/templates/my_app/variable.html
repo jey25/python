@@ -6,8 +6,19 @@
   </head>
   <body>
     <h1>Variable.html</h1>
+    <!-- 변수 사용 -->
     <h2>이름 : {{ first_name }}{{last_name}}</h2>
-    <h2>{{some_list}}, {{some_list.0}}</h2>
-    <h2>{{some_dict}}, {{some_dict.key}}</h2>
+
+    <!-- 리스트 값 가져오기 -->
+    <h2>{{some_list}}, {{some_list.0 | add:"2"}}</h2>
+
+    <!-- 딕셔너리 value 가져오기 -->
+    <h2>{{some_dict}}, {{some_dict.key | upper}}</h2>
+
+    <!-- 문장 사이에 주석 달기 -->
+    <h2>{# test #}</h2>
+
+    <!-- 모두를 소문자로 만든 후, 첫번째 글자만 대문자로 출력 -->
+    <h2>{{django | lower | capfirst}}</h2>
   </body>
 </html>

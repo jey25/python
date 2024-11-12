@@ -12,6 +12,7 @@ def variable_view(request):
         'last_name':"어영",
         'some_list':[1,2,3],
         'some_dict':{'key':'value'},
+        'django':"djanGo"
     }
     
     return render(request, 'my_app/variable.html', context=my_var)
